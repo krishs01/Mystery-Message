@@ -69,14 +69,14 @@ http://localhost:3000
 # Contributing
 We welcome contributions from the community. To contribute, please follow these steps:
 
-Fork the repository.
-Create a new branch:
+1. Fork the repository.
+2. Create a new branch:
 
-git checkout -b feature/your-feature-name
-Make your changes and commit them:
+3. git checkout -b feature/your-feature-name
+4. Make your changes and commit them:
 
-git commit -m "Add feature: description of your feature"
-Push to the branch:
+5. git commit -m "Add feature: description of your feature"
+6. Push to the branch:
 
-git push origin feature/your-feature-name
-Open a pull request.
+7. git push origin feature/your-feature-name
+8. Open a pull request.
