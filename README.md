@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Mystery Message App
+# Overview
+The Mystery Message App is a secure and anonymous messaging platform built with Next.js. This app allows users to send anonymous messages to anyone without sharing their personal details. It utilizes advanced features to ensure user privacy and message integrity, including unique usernames, unique message IDs for message deletion, JSON Web Tokens (JWT) for authentication, and OTP-based verification through Resend Mail.
+
+# Features
+# Anonymous Messaging
+1. Send Anonymous Messages: Users can send messages anonymously without revealing their identity.
+2. No Personal Details Required: No need to share personal information to send or receive messages.
+
+# User Authentication and Verification
+1. JSON Web Tokens (JWT): Secure authentication using JWT ensures that user sessions are safe and protected.
+2. OTP-Based Verification: An additional layer of security with OTP verification sent via email using Resend Mail.
+# Unique Identifiers
+1. Unique Usernames: Each user is assigned a unique username to maintain anonymity.
+2. Unique Message IDs: Messages are assigned unique IDs, allowing users to delete specific messages if needed.
+
+# Security and Privacy
+1. Encryption: All passwords are encrypted to ensure that only the intended recipient can read them
+2. Secure Data Handling: User data and messages are securely handled and stored.
+
 
 ## Getting Started
+# Prerequisites
+1. Node.js installed on your system
+2. A Next.js development environment set up
 
-First, run the development server:
+# Installation
+Clone the repository:
+git clone https://github.com/yourusername/mystery-message-app.git
+cd mystery-message-app
 
-```bash
+# Install dependencies:
+
+npm install
+Set up environment variables:
+Create a .env.local file in the root directory and add the following:
+
+
+# Copy code
+JWT_SECRET=your_jwt_secret
+RESEND_API_KEY=your_resend_mail_api_key
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+Start the development server:
+
+# run command
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open your browser and navigate to:
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+# Sending a Message
+1. Register or log in using your unique username.
+2. Verify your email with the OTP sent via Resend Mail.
+3. Compose your message and send it anonymously.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Deleting a Message
+1. Log in to your account.
+2. Delete the message by selecting the message and press delete.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# Technologies Used
+1. Next.js: Framework for server-rendered React applications.
+2. Next.js: Backend server runtime.
+3. JWT: For secure user authentication.
+4. Resend Mail: For sending OTPs for email verification.
+5. MongoDB: Database for storing user and message data.
+   
+# Contributing
+We welcome contributions from the community. To contribute, please follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fork the repository.
+Create a new branch:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+git checkout -b feature/your-feature-name
+Make your changes and commit them:
 
-## Deploy on Vercel
+git commit -m "Add feature: description of your feature"
+Push to the branch:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+git push origin feature/your-feature-name
+Open a pull request.
